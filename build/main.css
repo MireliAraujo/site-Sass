@@ -5,6 +5,50 @@
   font-family: "Roboto", sans-serif;
 }
 
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+}
+.products .product-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+.products .product-button {
+  display: block;
+  background-color: #44bd32;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+.products .product-button:hover {
+  background-color: #4cd137;
+}
+
+li {
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  font-weight: bold;
+  margin-left: 24px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 body {
   background-color: #f5f6fa;
 }
@@ -24,20 +68,6 @@ header .container {
   align-items: center;
   padding: 16px 0;
 }
-header .container li {
-  list-style: none;
-}
-header .container .menu {
-  display: flex;
-}
-header .container .menu li {
-  font-weight: bold;
-  margin-left: 24px;
-}
-header .container .menu li a {
-  color: #fff;
-  text-decoration: none;
-}
 
 section {
   padding: 56px 0;
@@ -46,31 +76,6 @@ section .container {
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
-}
-section .container .products {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 32.66%);
-  column-gap: 1%;
-  row-gap: 4%;
-  width: 100%;
-}
-section .container .products .product-item img {
-  width: 100%;
-  border-radius: 16px;
-}
-section .container .products .product-button {
-  display: block;
-  background-color: #44bd32;
-  color: #fff;
-  text-align: center;
-  padding: 8px 0;
-  border-radius: 8px;
-  margin-top: 8px;
-  text-decoration: none;
-}
-section .container .products .product-button:hover {
-  background-color: #4cd137;
 }
 section li {
   list-style: none;

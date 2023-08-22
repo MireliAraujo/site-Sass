@@ -1,5 +1,7 @@
 @use 'config/reset';
 @use 'variaveis/variaveis';
+@use 'secoes/produtos';
+@use 'secoes/navbar';
 
 @mixin container(){
     max-width: 1024px;
@@ -16,31 +18,13 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-
+    
     & .container {
         @include container();
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 16px 0;
-
-        & li {
-            list-style: none;
-        }
-
-        & .menu {
-            display: flex;
-        }
-        
-        & .menu li {
-            font-weight: bold;
-            margin-left: 24px;
-        }
-        
-        & .menu li a {
-            color: #fff;
-            text-decoration: none;
-        }
     }
 }
 
@@ -50,35 +34,6 @@ section {
     & .container {
         @include container();
 
-
-        & .products {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(3, 32.66%);
-            column-gap: 1%;
-            row-gap: 4%;
-            width: 100%;
-
-            & .product-item img {
-                width: 100%;
-                border-radius: 16px;
-            }
-            
-            & .product-button {
-                display: block;
-                background-color: #44bd32;
-                color: #fff;
-                text-align: center;
-                padding: 8px 0;
-                border-radius: 8px;
-                margin-top: 8px;
-                text-decoration: none;
-            }
-            
-            & .product-button:hover {
-                background-color: #4cd137;
-            }
-        }
     }
     & li {
         list-style: none;
@@ -86,7 +41,7 @@ section {
 }
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: variaveis.$tiblet) {
     .container {
         max-width: 80%;
     }
@@ -97,7 +52,7 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: variaveis.$mobile) {
     .products {
         display: block;
     }
